@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voiceflow Web Chat</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4;
+        }
+        .chat-container {
+            width: 400px;
+            height: 600px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <script type="text/javascript">
+          (function(d, t) {
+              var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+              v.onload = function() {
+                window.voiceflow.chat.load({
+                  verify: { projectID: 'ВАШ_PROJECT_ID' },
+                  url: 'https://general-runtime.voiceflow.com',
+                  versionID: 'production'
+                });
+              }
+              v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+          })(document, 'script');
+        </script>
+    </div>
+</body>
+</html>
